@@ -1,0 +1,14 @@
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\bin\Debug\PaginationControl.dll.config
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\bin\Debug\PaginationControl.dll
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\bin\Debug\PaginationControl.pdb
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl.csproj.AssemblyReference.cache
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\Pagination.g.cs
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl_MarkupCompile.cache
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl_MarkupCompile.lref
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\Pagination.baml
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl.g.resources
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl.Properties.Resources.resources
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl.csproj.GenerateResource.cache
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl.csproj.CoreCompileInputs.cache
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl.dll
+D:\VS Projects\Test_Kiosk_MVVM\PaginationControl\obj\Debug\PaginationControl.pdb

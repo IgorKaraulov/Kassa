@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\VS Projects\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM.csproj": {}
+  },
+  "projects": {
+    "D:\\VS Projects\\Test_Kiosk_MVVM\\DataUploader\\DataUploader.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\VS Projects\\Test_Kiosk_MVVM\\DataUploader\\DataUploader.csproj",
+        "projectName": "DataUploader",
+        "projectPath": "D:\\VS Projects\\Test_Kiosk_MVVM\\DataUploader\\DataUploader.csproj",
+        "packagesPath": "C:\\Users\\Игорь\\.nuget\\packages\\",
+        "outputPath": "D:\\VS Projects\\Test_Kiosk_MVVM\\DataUploader\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Игорь\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "NLog.Config": {
+              "target": "Package",
+              "version": "[4.7.15, )"
+            },
+            "NLog.Schema": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\VS Projects\\Test_Kiosk_MVVM\\PaginationControl\\PaginationControl.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\VS Projects\\Test_Kiosk_MVVM\\PaginationControl\\PaginationControl.csproj",
+        "projectName": "PaginationControl",
+        "projectPath": "D:\\VS Projects\\Test_Kiosk_MVVM\\PaginationControl\\PaginationControl.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\VS Projects\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\VS Projects\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM.csproj",
+        "projectName": "Test_Kiosk_MVVM",
+        "projectPath": "D:\\VS Projects\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM.csproj",
+        "packagesPath": "C:\\Users\\Игорь\\.nuget\\packages\\",
+        "outputPath": "D:\\VS Projects\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Игорь\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "D:\\VS Projects\\Test_Kiosk_MVVM\\DataUploader\\DataUploader.csproj": {
+                "projectPath": "D:\\VS Projects\\Test_Kiosk_MVVM\\DataUploader\\DataUploader.csproj"
+              },
+              "D:\\VS Projects\\Test_Kiosk_MVVM\\PaginationControl\\PaginationControl.csproj": {
+                "projectPath": "D:\\VS Projects\\Test_Kiosk_MVVM\\PaginationControl\\PaginationControl.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "NLog.Config": {
+              "target": "Package",
+              "version": "[4.7.15, )"
+            },
+            "NLog.Schema": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

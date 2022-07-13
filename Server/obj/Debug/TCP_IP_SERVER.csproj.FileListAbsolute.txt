@@ -1,0 +1,14 @@
+D:\VS Projects\Test_Kiosk_MVVM\Server\bin\Debug\NLog.config
+D:\VS Projects\Test_Kiosk_MVVM\Server\bin\Debug\Server.exe.config
+D:\VS Projects\Test_Kiosk_MVVM\Server\bin\Debug\Server.exe
+D:\VS Projects\Test_Kiosk_MVVM\Server\bin\Debug\Server.pdb
+D:\VS Projects\Test_Kiosk_MVVM\Server\bin\Debug\Newtonsoft.Json.dll
+D:\VS Projects\Test_Kiosk_MVVM\Server\bin\Debug\NLog.dll
+D:\VS Projects\Test_Kiosk_MVVM\Server\bin\Debug\Newtonsoft.Json.xml
+D:\VS Projects\Test_Kiosk_MVVM\Server\bin\Debug\NLog.xml
+D:\VS Projects\Test_Kiosk_MVVM\Server\obj\Debug\TCP_IP_SERVER.csproj.AssemblyReference.cache
+D:\VS Projects\Test_Kiosk_MVVM\Server\obj\Debug\TCP_IP_SERVER.csproj.SuggestedBindingRedirects.cache
+D:\VS Projects\Test_Kiosk_MVVM\Server\obj\Debug\TCP_IP_SERVER.csproj.CoreCompileInputs.cache
+D:\VS Projects\Test_Kiosk_MVVM\Server\obj\Debug\TCP_IP_SERVER.csproj.CopyComplete
+D:\VS Projects\Test_Kiosk_MVVM\Server\obj\Debug\Server.exe
+D:\VS Projects\Test_Kiosk_MVVM\Server\obj\Debug\Server.pdb

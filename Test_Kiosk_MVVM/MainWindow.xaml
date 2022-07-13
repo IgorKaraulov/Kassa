@@ -1,0 +1,122 @@
+﻿<Window x:Class="Test_Kiosk_MVVM.MainWindow"
+        x:Name="Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_Kiosk_MVVM"
+        xmlns:vm="clr-namespace:Test_Kiosk_MVVM.ViewModels"
+        xmlns:pg="clr-namespace:PaginationControl;assembly=PaginationControl"
+        mc:Ignorable="d"
+        Title="MainWindow"  Style="{DynamicResource WindowStyle}">
+    <Window.DataContext>
+        <vm:ApplicationViewModel/>
+
+    </Window.DataContext>
+
+
+    <Grid Style="{DynamicResource GridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Canvas Grid.ColumnSpan="2">
+            <Button x:Name="ButtonUp" Height ="50" Width="300" Command="{Binding CategoryButtonUp}">ButtonUp</Button>
+            <!--Тут список категорий-->
+            <ScrollViewer x:Name="CategoryPanel" Style="{DynamicResource CategoryPanelStyle}" >
+                <ItemsControl ItemsSource="{Binding Path=CategoryModel.Categories}" MouseWheel="UIElement_OnMouseWheel">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+
+                            <Button  Command="{Binding Path=DataContext.CategoryUpdate, ElementName=Menu}" CommandParameter="{Binding Id}" Style="{DynamicResource ButtonCategoryStyle}" Click="CategoryButtonAnimation" >
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Style="{DynamicResource ImagePanelStyle}"/>
+                                    <TextBlock  Text ="{Binding Name}" Style="{DynamicResource TextBlockStyle}" />
+                                </StackPanel>
+                            </Button>
+
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+            </ScrollViewer>
+            <Button  x:Name="ButtonDown" Height ="50" Width="300" Canvas.Top="350" Command="{Binding CategoryButtonDown}">ButtonDown</Button>
+
+
+            <!--Тут список Item`ов в данной категории-->
+            <StackPanel Orientation="Vertical" Canvas.Right="0" Canvas.Top="0">
+
+                <ScrollViewer x:Name="ItemsPanel" Style="{DynamicResource ScrollViewerStyle}">
+
+
+                    <ItemsControl  ItemsSource="{Binding CategoryModel.ProductsViewWithPaginator}" >
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button  Style="{DynamicResource ButtonItemStyle}" Command="{Binding Path=DataContext.AddProductToOrder, ElementName=Menu}" CommandParameter="{Binding Id}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image  Style="{DynamicResource ImagePanelStyle}"/>
+                                        <TextBlock  Text ="{Binding Name, UpdateSourceTrigger =PropertyChanged}" Style="{DynamicResource TextBlockStyle}"/>
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock   Text="Цена" Style="{DynamicResource TextBlockStyle}"  />
+                                            <TextBlock   Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource TextBlockStyle}"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                </ScrollViewer>
+                <pg:Pagination DataContext="{Binding PaginationViewModel, UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+
+
+            <!--Тут корзина с заказом-->
+            <GroupBox x:Name="OrderBox" Style="{DynamicResource OrderBoxStyle}" >
+                <GroupBox.Header >
+                    <Label Style="{DynamicResource OrderBoxHeaderStyle}"  >Ваш заказ</Label>
+                </GroupBox.Header>
+
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Общая сумма заказа:" Style="{DynamicResource OrderBoxTextBlockStyle}" />
+
+                        <Button  Style="{DynamicResource SendOrderButton}" Command="{Binding Path=SendMessage}" >
+                            Отправить заказ
+                        </Button>
+
+                    </StackPanel>
+
+                    <TextBlock Text="{Binding OrderModel.Sum}" Style="{DynamicResource OrderBoxTextBlockStyle}"/>
+
+                    <ScrollViewer    Style="{DynamicResource HorizontalScrollViewerStyle}"  >
+                        <ItemsControl ItemsSource="{Binding OrderModel.Products}" ScrollViewer.CanContentScroll="False">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Style="{DynamicResource OrderBoxButton}" Command="{Binding Path=DataContext.RemoveProductFromOrder, ElementName=Menu}" CommandParameter="{Binding Id}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{Binding Image.Source}" Style ="{DynamicResource ImagePanelStyle}"/>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Text="{Binding Name}" Style="{DynamicResource TextBlockStyle}"/>
+                                                <TextBlock Text="{Binding Price}" Style="{DynamicResource TextBlockStyle}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </StackPanel>
+            </GroupBox>
+
+
+        </Canvas>
+    </Grid>
+</Window>
