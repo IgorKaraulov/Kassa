@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PaginationControl.Models
 {
-  public  class Page: INotifyPropertyChanged
+    public  class Page: INotifyPropertyChanged
     {
         public Page(int number)
         {
@@ -28,7 +28,6 @@ namespace PaginationControl.Models
                 OnPropertyChanged("Number");
             }
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

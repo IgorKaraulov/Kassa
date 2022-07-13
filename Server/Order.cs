@@ -20,7 +20,7 @@ namespace TCP_IP_Server
                 products = value;
             }      
         }
-       public float OrderSum 
+        public float OrderSum 
         {
             get
             {
@@ -32,13 +32,10 @@ namespace TCP_IP_Server
             }
         }
 
-
         public Order(List<Product> products, float sum)
         {
             this.products = products;
             this.orderSum = sum;
         }
-
-
    }
 }

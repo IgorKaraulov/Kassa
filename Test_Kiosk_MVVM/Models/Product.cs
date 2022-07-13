@@ -74,7 +74,6 @@ namespace Test_Kiosk_MVVM.Models
                 image = value;
                 OnPropertyChanged("ImagePath");
             }
-
         }
         #endregion
 
@@ -125,7 +124,6 @@ namespace Test_Kiosk_MVVM.Models
                 ApplicationViewModel.logger.Error("Не верный формат информации о продукте \n" + e.Message);
             }
             
-
             try
             {
                 var bitmapImg = new BitmapImage();
@@ -155,11 +153,7 @@ namespace Test_Kiosk_MVVM.Models
                     throw new Exception("По указанному в конфиг-файле пути нет картинки default.png. Добавьте картинку или измените путь.");
                 }
                
-            }
-
-            
-                
-            
+            }           
         }
 
         public void OnPropertyChanged([CallerMemberName] string prop = "")

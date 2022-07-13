@@ -27,13 +27,9 @@ namespace PaginationControl.ViewModel
                 OnPropertyChanged("PaginationModel");
             }
         }
-
         #endregion
-        
-        
 
         #region Commands
-
         public ICommand ChangePage
         {
             get
@@ -41,8 +37,6 @@ namespace PaginationControl.ViewModel
                 return new RelayCommand(param => { PageChange((int)param); });
             } 
         }
-
-       
         #endregion
 
         #region CommandMethods
@@ -50,18 +44,16 @@ namespace PaginationControl.ViewModel
         {
             paginationModel.CurrentPage = num;
         }
-
         #endregion
 
-     public PaginationViewModel(PaginationModel pm)
-     {
+        public PaginationViewModel(PaginationModel pm)
+        {
             PaginationModel = pm;
             PaginationModel.PropertyChanged += OnItemsPerPageCountChanged;
-     }
-
-
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             if (PropertyChanged != null)
@@ -69,7 +61,6 @@ namespace PaginationControl.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
             }
         }
-
         private void OnItemsPerPageCountChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "ProductsPerPage")
@@ -77,6 +68,5 @@ namespace PaginationControl.ViewModel
                 PageChange(1);
             }
         }
-
     }
 }

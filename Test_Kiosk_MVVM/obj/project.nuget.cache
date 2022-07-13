@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z8saOmjyn/1MyPtFfIgh5U1Imd4Ls2ZzkwbOSjcbDHS6ufk5EK2LIFlLws1+jcRtQvmwfIYZDUEVUblc/qJCIw==",
+  "dgSpecHash": "uW250McYhZscpc7Z+lBWmvWGB4XYPmuRxotvTbgVKFftg6k8Oa/abZm3R8ve27bbgkFc+v1IJxravw5j4rUIeg==",
   "success": true,
-  "projectFilePath": "D:\\VS Projects\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM.csproj",
+  "projectFilePath": "D:\\VS Projects\\Test_Kiosk_MVVM\\Kiosk\\Test_Kiosk_MVVM\\Test_Kiosk_MVVM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Игорь\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Игорь\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

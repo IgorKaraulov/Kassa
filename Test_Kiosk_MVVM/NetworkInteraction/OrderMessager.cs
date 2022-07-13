@@ -48,8 +48,7 @@ namespace Test_Kiosk_MVVM.NetworkInteraction
                 tcpSocket.Close();
             }
             catch (Exception e)
-            {
-                
+            {   
                 ApplicationViewModel.logger.Error("Ошибка при отправке сообщения на сервер. \n" + e.Message);
                 return e.Message;
             }

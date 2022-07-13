@@ -19,8 +19,7 @@ namespace TCP_IP_Server
             get { return id; }
             set
             {
-                id = value;
-                
+                id = value; 
             }
         }
         public string Name
@@ -29,7 +28,6 @@ namespace TCP_IP_Server
             set
             {
                 name = value;
-                
             }
         }
         public float Price
@@ -46,13 +44,8 @@ namespace TCP_IP_Server
             set
             {
                 categoryId = value;
-             
             }
         }
         #endregion
-
-
-
-
     }
 }

@@ -7,17 +7,13 @@ using System.Collections.ObjectModel;
 
 namespace PaginationControl.Models
 {
-   
-
     public class PaginationModel : INotifyPropertyChanged
     {
-
         private int currentPage;
         private int productsPerPage;
         private int totalPages;
         private int totalProducts;
         private int[] prodPerPageVariants;
-
 
         public int CurrentPage
         {
@@ -30,7 +26,6 @@ namespace PaginationControl.Models
                 currentPage = value;
                 OnPropertyChanged("CurrentPage");
             }
-
         }
         public int ProductsPerPage
         {
@@ -44,7 +39,6 @@ namespace PaginationControl.Models
                 OnPropertyChanged("ProductsPerPage");
                 TotalPages = CalculateTotalPages(TotalProducts,value);
             }
-
         }
         public int TotalPages
         {
@@ -57,7 +51,6 @@ namespace PaginationControl.Models
                 totalPages = value;
                 OnPropertyChanged("TotalPages");
             }
-
         }
         public int TotalProducts
         {
@@ -70,7 +63,6 @@ namespace PaginationControl.Models
                 totalProducts = value;
                 OnPropertyChanged("TotalProducts");
             }
-
         }
 
         public int[] ProdPerPageVariants
@@ -83,11 +75,9 @@ namespace PaginationControl.Models
             {
                 prodPerPageVariants = value;
             }
-
         }
 
         public ObservableCollection<Page> Pages { get; set; }
-
 
         public  PaginationModel(int productsCount, int prodPerPage)
         {
@@ -106,9 +96,6 @@ namespace PaginationControl.Models
 
             PropertyChanged += OnPropertyTotalPagesChanged;
         }
-
-
-
         public PaginationModel(int productsCount)
         {
             CurrentPage = 1;
@@ -124,10 +111,7 @@ namespace PaginationControl.Models
             }
             prodPerPageVariants = new int[] { 1, 5, 10, 15 };
             PropertyChanged += OnPropertyTotalPagesChanged;
-
         }
-
-
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
@@ -137,7 +121,6 @@ namespace PaginationControl.Models
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
             }
         }
-
         private int CalculateTotalPages(int productsCount, int productsPerPage) 
         {
 
@@ -149,7 +132,6 @@ namespace PaginationControl.Models
 
             return totalPages;
         }
-
         private void OnPropertyTotalPagesChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "TotalPages")
@@ -160,7 +142,6 @@ namespace PaginationControl.Models
                     Pages.Add(new Page(i + 1));
                 }
             }
-           
         }
     }
 }

@@ -27,7 +27,6 @@ namespace TCP_IP_Server
 
                 try
                 {
-
                     tcpSocket.Bind(tcpEndpoint);
                     tcpSocket.Listen(5);
                 }

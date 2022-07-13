@@ -15,10 +15,8 @@ namespace Test_Kiosk_MVVM.Models
         //Сумма в заказе
         private float sum;
 
-
         //Список продуктов отображаемых в заказе (View)
         public ObservableCollection<Product> Products { get; set; }
-
 
         public float Sum 
         {
@@ -29,7 +27,6 @@ namespace Test_Kiosk_MVVM.Models
                 OnPropertyChanged("Sum");
             }
         }
-
         public Product GetProductWithId(int id)
         {
             for (int i = 0; i < Products.Count; i++) 
@@ -37,13 +34,11 @@ namespace Test_Kiosk_MVVM.Models
                 if (Products[i].Id == id)
                 {
                     return Products[i];
-                    
                 }
             }
             ApplicationViewModel.logger.Error("Неверный id продукта при поиске в списке");
             throw new Exception("Товара с таким id нет в заказе");
         }
-
 
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
